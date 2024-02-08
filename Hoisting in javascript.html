@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- Hoisting in javascript -->
+	<!-- Hoisting means you can access the variable and function before its declaration -->
+	<!-- JavaScript only hoists declarations, not initializations. -->
+
+	<!-- variable hoisting -->
+	<!-- It means you can access variables before its declaration  for example: -->
+
+	<script type="text/javascript">
+		console.log(a); // output undefined;
+		var a=7;
+	</script>
+
+	<!-- function hoisting -->
+	<!-- It means you can access function even before its declaration  for example-->
+
+	<script type="text/javascript">
+		hello(); // output Namaste Javascript
+		function hello(){
+			console.log('Namaste Javascript')
+		}
+	</script>
+
+	<!-- In case of function expression and arrow function it works different -->
+
+	<!-- JavaScript treats function expression and arrow function as variables, it store undefine in memory inPlace of function copy-->
+
+	<!-- You can access it as variable -->
+	<!-- for example -->
+
+	<script type="text/javascript">
+		
+		express(); // typeError: express is not a function.
+
+		console.log(express); // undefine
+		var express=function(){
+			console.log('Namaste JavaScript')
+		}
+
+
+		arrow(); // typeError: arrow is not a function.
+
+		console.log(arrrow); // undefine
+		var arrow=()=>{
+			console.log('Namaste JavaScript')
+		}
+
+	</script>
+
+
+</body>
+</html>

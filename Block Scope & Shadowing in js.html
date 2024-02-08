@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- Block Scope & Shadowing in JS -->
+
+	<!-- Block -->
+	<!-- Block is defined by curly braces{}-->
+	<!-- It is also called compound statement -->
+	<!-- It is used to combined multiplie statement into one group so that we can use it where javascript expects only one statement-->
+
+
+	<!-- Block Scope -->
+	<!-- Block Scope means what variables we can access inside block {}-->
+	<script type="text/javascript">
+		{
+			var a=10;
+			let b=20;
+			const c=30;
+		}
+	</script>
+	<!-- we can't access let and const outside block because they are in seperate memory space -->
+	<!-- if we try's to access it outside block it gives ReferenceError that b is not defined -->
+	<!-- But we can even access var outside this block because they are in global space -->
+
+
+	<!-- Shadowing -->
+	<!-- when a variable defined within a specific block has the same name as a variable defined in its outer scope. -->
+	<!-- The variable inside the block shadowed the variable which is in outer scope -->
+	<!-- In case of var -->
+	<script type="text/javascript">
+		var a=100;
+		{
+			var a=10; // This 'Var' shadows the outer var			console.log(a); // output 10
+		}
+		console.log(a); // output 10, the inner var modifies the outer var 
+	</script>
+	<!-- when we try to access the var which is inside the block, so this shadowed the var which is in outer scope.And the value assigned to the variable in the inner scope is the value that will be stored in the variable in the memory space because they are pointing to the same memory place-->
+
+	<!-- In case of let and const -->
+	<script type="text/javascript">
+		let b=100;
+		{
+			let b=10; // This 'let' shadows the outer let
+			console.log(a); // output 10 it refers to the block scope
+		}
+		console.log(a); // output 100, it refers to the seperate space(outside block scope).
+	</script>
+	<!-- when we try to access the let which is inside the block, so this shadowed the let which is in outer scope.And the value assigned to the variable in the inner scope is store in block scope and the value assigned to the variable in the outer scope is store in seperate memory than block-->
+
+	<!-- In case of function it works the same like variables -->
+
+	<!-- Illegal Shadowing -->
+	<!-- While shadowing a variable, it should not cross the boundry of scope-->
+	<!-- we can't shadow same name let variable by var variable but do the opposite this is called illegel shadowing. -->
+	<script type="text/javascript">
+		let a=20;
+		{
+			var a=30;
+			console.log(a); // output syntaxError Identifier 'a' hsa already been declared.
+		}
+	</script>
+
+</body>
+</html>

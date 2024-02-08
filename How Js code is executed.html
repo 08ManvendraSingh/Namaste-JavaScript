@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- How JavaScript code is executed -->
+	<!-- 
+		
+		when we run javascript code or any js program an execution context is created.
+
+		Execution context is like a big box which has  two componenets 
+
+		1.Memory component(variable environment) -> It is a place where all variables and functions are stored as a key value pair. 
+
+		2.Code component(Thread of execution)-> It is a place where code is executed line by line one at a time.
+		
+		In Memory creation phase when js run line by line to the whole code for first time it allocate undefined to variables and in case of function it stores the whole code of function inside it.
+
+		In Code execution phase js runs again line by line to the whole js code and execute the code.
+		It is the point when all calculation is done.
+
+		In second phase in case of variable  when code is executed the value of variables is placed inplace of undefined in memory creation.
+
+		In second phase in case of function when code is executed and there is function invok or calling an new Execution context is created and
+		in new execution context we are only concern about the code of the function. 
+		once the whole program is done the control goes to the place where function was invoked.And the new executinon context is deleted.
+
+		Once the js done all it work and program is finised what happen's the whole global execution context is deleted and that's how code is executed.		
+	-->
+	
+</body>
+</html>

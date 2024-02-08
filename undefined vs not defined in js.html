@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- undefined vs not defined in js -->
+
+	<!-- undefined -->
+	<!-- js create a global execution context and allocate memory to variables with a placeholder called undefined even before a single line of code is executed -->
+	<!-- undefined is like a placeholder which is store untill the variable is assigned some value -->
+
+
+	<!-- not defined -->
+	<!-- if try to access which we have not allocate memory to is called not defined-->
+
+	<script type="text/javascript">
+		console.log(a);
+		var a=10;
+		console.log(a);
+		console.log(b);
+	</script>
+
+
+	<!-- Javascript is a loosely typed language -->
+	<!-- loosely typed means js does not attaches its variable with any data type -->
+	<!-- if initially x is string later on we can put number or boolean in x-->
+	<!-- loosely typed language  is also known as weakly type language -->
+
+	<script type="text/javascript">
+		var a=2;
+		console.log(a);
+		a='jonas';
+		console.log(a);
+	</script>
+	
+</body>
+</html>

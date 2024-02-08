@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- Let & const Temporal dead zone -->
+
+	<!-- Let and const -->
+	<!-- Let and const declerations are also hoistied but they are hoistied diffrently from var-->
+	<!-- Let and const are hoistied in Temporal Dead Zone(TDZ) -->
+
+	<!-- In case of var they are hoistied and allocate memory in global space  -->
+
+	<!-- In case of let and const they are also hoistied and allocate memory but they are stored in different memory than global-->
+	<!-- we can't access this memory space before we can't initialize them-->
+
+	<!-- Temporal Dead Zone ->It is time since when let and const were hoistied till they are initialized.
+	The time between hoisting and initialized is known as temporal dead zone. -->
+
+	<!-- Difference between var, let & const -->
+
+	<!-- Var -->
+	<!-- We can Create variable using Var keyword -->
+	<!-- We can update Var -->
+	<!-- we can Redeclared Var-->
+	<!-- We can initialize Var at the time of decleration and we can also initialize after decleration  -->
+
+	<!-- Let -->
+	<!-- We can Create variable using Let keyword -->
+	<!-- We can update Let -->
+	<!-- we can't Redeclared Let-->
+	<!-- We can initialize Let at the time of decleration and we can also initialize after decleration  -->
+
+	<!-- Const -->
+	<!-- We can Create variable using Const keyword -->
+	<!-- We can't update Const -->
+	<!-- we can't Redeclared Const-->
+	<!-- It is compulsary to initialize Const at the time of decleration  -->
+
+
+	<script type="text/javascript">
+		let a=10;
+		console.log(a);
+		var b=100;
+	</script>
+
+
+</body>
+</html>

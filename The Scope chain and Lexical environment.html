@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- The Scope Chain & Lexical Environment-->
+
+	<!-- Scope means where you can access variable or function in code-->
+
+	<!-- Important Note -> whenever an execution context is created an Lexical Environment is also created with it. -->
+
+	<!-- Lexical Environment means it is the local memory and reference to lexical environment of its parent(memory of its parent)-->
+
+	<!-- Explaning by below example -->
+
+	<script type="text/javascript">
+		function a(){
+			c()
+			function c(){
+				console.log(b);
+			}
+		}
+		a();
+		console.log(b);				
+	</script>
+
+	<!-- when c's execution context is created  it has its own local memory and reference of its parent lexical environment(a's) -->
+
+	<!-- when a's execution context is created  it has its own local memory and reference of its parent lexical environment(global) -->
+
+	<!-- when global execution context is created  it has its own local memory and reference of its parent lexical environment and it ponits to outer environment which is null because it does not have parent-->
+
+	<!-- scope chain means chain of all lexical environment and parent's lexical enviornment -->
+
+</body>
+</html>
